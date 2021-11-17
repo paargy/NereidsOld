@@ -1,8 +1,10 @@
 import java.util.LinkedHashMap;
 public class Nereids{
-	 private String name; //Nereid's name
-	 private int agility,organization,wisdom,windlessness,courage,strength,animalfriendly,orientation,justice; //Nereid's degree of characteristics (an int variable ranging from 0-4)
-	 public Nereids(String name,int agility,int organization,int wisdom,int windlessness,int courage,int strength,int animalfriendly,int orientation,int justice){ //constructor
+	private LinkedHashMap<String,Integer> ch =new LinkedHashMap<String,Integer>() ;
+	static String [] names ={"Actaea", "Doris", "Euagore", "Eucrate", "Eupompe", "Thetis", "Thoe", "Menippe", "Ploto"};
+	private String name; //Nereid's name
+	private int agility,organization,wisdom,windlessness,courage,strength,animalfriendly,orientation,justice; //Nereid's degree of characteristics (an int variable ranging from 0-4)
+	public Nereids(String name,int agility,int organization,int wisdom,int windlessness,int courage,int strength,int animalfriendly,int orientation,int justice){ //constructor
 	    this.name=name;
 	    this.agility=agility;
 	    this.organization=organization;
@@ -13,12 +15,13 @@ public class Nereids{
 	    this.animalfriendly=animalfriendly;
 	    this.orientation=orientation;
 	    this.justice=justice;
+	    this.Characteristics();
 	 }
 	 public String getName(){ //returns Nereid's name
 		 return name;
 	 }
 	 public LinkedHashMap<String,Integer> Characteristics(){//returns the characteristic of the Nereid and the degree of the characteristic
-		 LinkedHashMap<String,Integer> ch =new LinkedHashMap<String,Integer>() ;
+
 		 ch.put("AGILITY",agility);
 		 ch.put("ORGANIZATION",organization);
 		 ch.put("WISDOM",wisdom);
